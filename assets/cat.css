@@ -445,3 +445,32 @@ form.is-sent > :not(.sent){display:none}
 .reel.r5 .clip:not(:first-child) .cap b{font-size:15px}
 .reel.r5 .clip:not(:first-child) .pl{width:40px;height:40px}
 .reel.r5 .clip:not(:first-child) .pl svg{width:16px;height:16px}
+
+/* Legal pages */
+.legal{padding-top:clamp(112px,16vh,160px);padding-bottom:var(--sec)}
+.legal-head{margin-top:clamp(28px,3vw,48px);padding-bottom:clamp(32px,4vw,64px);border-bottom:1px solid var(--line)}
+.legal-head h1{font-size:clamp(40px,3.4vw + 10px,84px);line-height:1;letter-spacing:-.025em}
+.legal-head .lead{margin-top:20px;max-width:58ch}
+.legal-head .upd{margin-top:20px;font-size:var(--fs-small);color:var(--muted)}
+.legal-grid{display:grid;grid-template-columns:minmax(200px,1fr) minmax(0,2.4fr);gap:var(--gap-m) clamp(32px,6vw,128px);margin-top:clamp(32px,4vw,64px)}
+.toc{position:sticky;top:96px;align-self:start}
+.hdr-gone .toc{top:32px}
+.toc p{font:500 var(--fs-small)/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.toc ol{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:4px}
+.toc a{display:block;padding:6px 0;color:var(--muted);font-size:var(--fs-small);transition:color var(--t-micro)}
+.toc a:hover{color:var(--ink)}
+.legal-body{max-width:68ch}
+.legal-body section{padding-block:clamp(24px,2.4vw,40px);border-bottom:1px solid var(--line)}
+.legal-body section:first-child{padding-top:0}
+.legal-body section:last-child{border-bottom:0}
+.legal-body h2{display:flex;align-items:baseline;gap:16px;font-family:var(--f-body);font-weight:500;font-size:var(--fs-h3);line-height:1.3;letter-spacing:-.01em}
+.legal-body h2 span{font-size:var(--fs-small);color:var(--accent);letter-spacing:.08em}
+.legal-body p,.legal-body li{color:rgba(242,242,238,.8)}
+.legal-body p+p{margin-top:14px}
+.legal-body h2+p,.legal-body h2+ul{margin-top:14px}
+.legal-body ul{margin:14px 0 0;padding-left:20px;display:grid;gap:8px}
+.legal-body li::marker{color:var(--accent)}
+.legal-body a{text-decoration:underline;text-underline-offset:3px}
+.tbc{background:rgba(25,227,255,.12);color:var(--accent);padding:1px 6px;border-radius:var(--r)}
+@media (max-width:1023px){.legal-grid{grid-template-columns:1fr}.toc{position:static}.toc ol{grid-template-columns:1fr 1fr;column-gap:24px}}
+@media (max-width:767px){.toc ol{grid-template-columns:1fr}}
