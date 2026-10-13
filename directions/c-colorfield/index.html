@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CAT · Virtual Production & Camera Cranes in Athens</title>
+<meta name="description" content="Virtual production and 34 high-end crane, dolly and remote-head systems for film, TV and commercials shooting in Greece.">
+<link rel="preload" href="../../assets/fonts/Panchang-Extrabold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/GoogleSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="../../assets/media/crane-sky-poster.jpg">
+<!--
+  CONCEPT · Direction C, "Colour field"
+  1. CAT sells certainty: the hardest camera move is possible here, in Greece, with the people who run it.
+  2. An international producer who sees a hundred rental sites a year and remembers none. CAT has to be the one they remember.
+  3. The page is a sequence of flat colour fields (blue, ink, lime, white), each one holding a single idea. Confident, graphic, unmistakable.
+  4. Signature: the hero is a blue field with a window of footage that opens to full-bleed as you scroll, like a shutter opening.
+  5. Panchang 800 (wide, loud) + Google Sans 400. Ultramarine as the brand field, acid lime only for action and emphasis. Equipment stays on neutral white.
+  6. No stock icons, no invented clients or numbers, no testimonials until real ones exist, nothing that points to Israel.
+-->
+<style>
+@font-face{font-family:"Panchang";src:url(../../assets/fonts/Panchang-Extrabold.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"G Sans";src:url(../../assets/fonts/GoogleSans-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"G Sans";src:url(../../assets/fonts/GoogleSans-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+
+:root{
+  --blue:#1B2BFF; --blue-2:#1422D9; --ink:#060608; --ink-2:#16161B; --lime:#C6FF1A; --white:#FFFFFF; --gray:#F2F2F0; --gray-2:#E4E4E0; --muted:#55555C;
+  --on-blue:rgba(255,255,255,.8);
+  --f-display:"Panchang","G Sans",system-ui,sans-serif;
+  --f-body:"G Sans",system-ui,sans-serif;
+  --gutter:clamp(24px,5vw,96px);
+  --sec:clamp(64px,7vw,160px); --sec-loose:clamp(96px,10vw,224px);
+  --gap-s:clamp(14px,1vw,24px); --gap-m:clamp(20px,2vw,48px); --pad-card:clamp(20px,2vw,40px);
+  --r:999px; --r-card:20px;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --t-micro:240ms; --t-reveal:700ms;
+  --fs-body:clamp(16px,.35vw + 14.6px,19px);
+  --fs-small:clamp(13px,.2vw + 12px,15px);
+  --fs-h2:clamp(26px,3vw + 4px,64px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+body{margin:0;background:var(--white);color:var(--ink);font:400 var(--fs-body)/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+img,video,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px;box-shadow:0 0 0 5px var(--ink)}
+.skip{position:absolute;left:16px;top:-80px;z-index:100;background:var(--lime);color:var(--ink);padding:12px 16px;border-radius:8px}
+.skip:focus{top:16px}
+.wrap{padding-inline:var(--gutter)}
+.measure{max-width:58ch}
+h1,h2,h3{margin:0;font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:-.02em}
+h2{font-size:var(--fs-h2);line-height:1.02}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 13px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase}
+.eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:currentColor}
+.lead{font-size:clamp(17px,.5vw + 14px,21px);line-height:1.55}
+
+/* Buttons: pill, 4 states */
+.btn{--h:54px;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:var(--h);padding:0 26px;border-radius:var(--r);border:0;font:500 16px/1 var(--f-body);cursor:pointer;white-space:nowrap;transition:transform var(--t-micro) var(--ease),background-color var(--t-micro),color var(--t-micro),box-shadow var(--t-micro)}
+.btn svg{width:18px;height:18px;transition:transform var(--t-micro) var(--ease)}
+.btn-primary{background:var(--lime);color:var(--ink)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 0 -4px var(--ink)}
+.btn-primary:hover svg{transform:translateX(3px)}
+.btn-primary:active{transform:none;box-shadow:none}
+.btn-ghost{background:rgba(255,255,255,.12);color:var(--white);box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
+.btn-ghost:hover{background:var(--white);color:var(--ink)}
+.btn-ghost:active{background:var(--gray)}
+.btn-ink{background:var(--ink);color:var(--white)}
+.btn-ink:hover{background:var(--blue);transform:translateY(-2px)}
+.btn-ink:active{transform:none}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:500;padding-block:4px;background:linear-gradient(currentColor,currentColor) left bottom/0 2px no-repeat;transition:background-size var(--t-micro) var(--ease)}
+.link svg{width:18px;height:18px;transition:transform var(--t-micro) var(--ease)}
+.link:hover{background-size:100% 2px}
+.link:hover svg{transform:translateX(3px)}
+
+/* Header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;gap:32px;height:84px;padding-inline:var(--gutter);color:var(--white);transition:transform 420ms var(--ease),background-color 320ms,height 320ms var(--ease)}
+.hdr.is-solid{background:var(--ink);height:68px}
+.hdr.is-hidden{transform:translateY(-100%)}
+.logo{font:800 22px/1 var(--f-display);letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.logo i{width:14px;height:14px;border-radius:50%;background:var(--lime)}
+.nav{display:flex;gap:6px;margin-inline-start:auto}
+.nav a{height:40px;display:flex;align-items:center;padding:0 16px;border-radius:var(--r);font-size:15px;font-weight:500;transition:background-color var(--t-micro),color var(--t-micro)}
+.nav a:hover{background:rgba(255,255,255,.14)}
+.nav a[aria-current]{background:var(--white);color:var(--ink)}
+.langs{display:flex;gap:4px}
+.langs button{display:flex;align-items:center;gap:6px;height:40px;padding:0 12px;border:0;border-radius:var(--r);background:transparent;font-size:13px;font-weight:500;cursor:pointer;color:rgba(255,255,255,.88);transition:background-color var(--t-micro),color var(--t-micro)}
+.langs button svg{width:18px;height:12px;border-radius:2px}
+.langs button:hover{color:var(--white)}
+.langs button[aria-pressed="true"]{background:rgba(255,255,255,.14);color:var(--white)}
+.hdr .btn{--h:44px;padding:0 20px;font-size:15px}
+.burger{display:none}
+
+/* HERO · shutter */
+.hero{position:relative;height:220svh;background:var(--blue);color:var(--white)}
+.stage{position:sticky;top:0;height:100svh;min-height:560px;overflow:hidden;isolation:isolate}
+.shot{position:absolute;inset:0;z-index:0;background:#0d1a8a url(../../assets/media/crane-sky-poster.jpg) center/cover;
+  clip-path:inset(calc(var(--ct,40vh) * (1 - var(--e,0))) calc(var(--cr,6vw) * (1 - var(--e,0))) calc(var(--cb,6vh) * (1 - var(--e,0))) calc(var(--cl,50vw) * (1 - var(--e,0))) round calc(var(--r-card) * (1 - var(--e,0))))}
+.shot video{width:100%;height:100%;object-fit:cover}
+.shot::after{content:"";position:absolute;inset:0;background:linear-gradient(28deg,rgba(6,6,8,.9) 0%,rgba(6,6,8,.62) 42%,rgba(6,6,8,0) 78%),linear-gradient(to bottom,transparent 78%,rgba(6,6,8,.35));opacity:var(--e,0)}
+.hero-copy{position:relative;z-index:1;height:100%;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:auto minmax(0,1fr);column-gap:var(--gap-m);row-gap:clamp(20px,4vh,48px);padding:calc(84px + clamp(12px,4vh,56px)) var(--gutter) clamp(24px,5vh,56px)}
+.hero-top,.hero-side{opacity:calc(1 - var(--e,0) * 2.2);transform:translateY(calc(var(--e,0) * -40px))}
+.hero.is-open .hero-copy{pointer-events:none}
+.hero.is-open .hero-top,.hero.is-open .hero-side{visibility:hidden}
+.hero-top{grid-column:1/-1;display:grid;gap:clamp(14px,2.6vh,28px)}
+.hero h1{font-size:clamp(28px, min(5.1vw, 9vh), 124px);line-height:1;letter-spacing:-.02em;text-wrap:balance;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero-side{display:flex;flex-direction:column;justify-content:flex-end;gap:clamp(16px,3vh,32px)}
+.hero .lead{color:var(--on-blue);max-width:40ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-meta{display:flex;gap:24px;font:500 12px/1.4 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.86)}
+.window{min-height:0}
+.beat{position:absolute;z-index:2;left:var(--gutter);right:var(--gutter);bottom:clamp(40px,10vh,112px);display:grid;gap:24px;justify-items:start;opacity:clamp(0, calc((var(--e,0) - .6) * 3), 1);transform:translateY(calc((1 - var(--e,0)) * 40px));pointer-events:none}
+.beat{visibility:hidden}
+.hero.is-open .beat{pointer-events:auto;visibility:visible}
+.beat p{font:800 clamp(26px,3.6vw,76px)/1.02 var(--f-display);text-transform:uppercase;letter-spacing:-.02em;max-width:18ch}
+.beat p span{color:var(--lime)}
+.vbtn{position:absolute;z-index:3;right:calc(var(--cr,6vw) * (1 - var(--e,0)) + 16px);bottom:calc(var(--cb,6vh) * (1 - var(--e,0)) + 16px);width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:50%;background:rgba(6,6,8,.45);backdrop-filter:blur(8px);color:var(--white);cursor:pointer;transition:background-color var(--t-micro)}
+.vbtn:hover{background:var(--ink)}
+.vbtn svg{width:16px;height:16px}
+.vbtn .i-play{display:none}.vbtn[aria-pressed="true"] .i-play{display:block}.vbtn[aria-pressed="true"] .i-pause{display:none}
+.h-in{opacity:0;transform:translateY(24px);animation:hin 900ms var(--ease) forwards}
+.hero-side .h-in:nth-child(2){animation-delay:120ms}.hero-side .h-in:nth-child(3){animation-delay:220ms}
+@keyframes hin{to{opacity:1;transform:none}}
+
+.js [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity var(--t-reveal) var(--ease),transform var(--t-reveal) var(--ease)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js [data-reveal][data-d="1"]{transition-delay:90ms}.js [data-reveal][data-d="2"]{transition-delay:180ms}.js [data-reveal][data-d="3"]{transition-delay:270ms}
+
+/* Doors: two colour fields */
+.doors{display:grid;grid-template-columns:1fr 1fr}
+.door{position:relative;display:grid;grid-template-rows:auto auto 1fr auto;gap:clamp(20px,3vh,32px);min-height:clamp(620px,96svh,1000px);padding:var(--sec) var(--gutter) var(--gutter);overflow:hidden}
+.d-vp{background:var(--ink);color:var(--white)}
+.d-cr{background:var(--lime);color:var(--ink)}
+.door .top{display:flex;justify-content:space-between;align-items:center}
+.door .top span{font:500 13px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase}
+.door .go{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;transition:transform var(--t-micro) var(--ease),background-color var(--t-micro),color var(--t-micro)}
+.d-vp .go{background:var(--lime);color:var(--ink)}
+.d-cr .go{background:var(--ink);color:var(--lime)}
+.door .go svg{width:22px;height:22px}
+.door:hover .go{transform:rotate(45deg) scale(1.06)}
+.door h3{font-size:clamp(26px,2.5vw + 4px,58px);line-height:1.02;letter-spacing:-.02em}
+.door p{max-width:40ch}
+.d-vp p{color:rgba(255,255,255,.78)}
+.door .media{position:relative;align-self:end;aspect-ratio:16/10;border-radius:var(--r-card);overflow:hidden;background:var(--ink-2)}
+.door .media img,.door .media video{width:100%;height:100%;object-fit:cover;transition:transform 1200ms var(--ease)}
+.door:hover .media img,.door:hover .media video{transform:scale(1.05)}
+.door .tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-flex;align-items:center;height:34px;padding:0 14px;border-radius:var(--r);font-size:13px;font-weight:500}
+.d-vp .tag{background:rgba(255,255,255,.1)}
+.d-cr .tag{background:rgba(6,6,8,.08)}
+
+/* Statement on blue */
+.about{background:var(--blue);color:var(--white);padding-block:var(--sec-loose)}
+.about .huge{font:800 clamp(34px,6.4vw,150px)/.95 var(--f-display);text-transform:uppercase;letter-spacing:-.025em;color:var(--lime)}
+.about-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--sec);margin-top:var(--sec);align-items:end}
+.about .lead{color:var(--on-blue)}
+.about .lead b{color:var(--white);font-weight:500}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap-s)}
+.fact{padding:var(--pad-card);border-radius:var(--r-card);background:var(--blue-2)}
+.fact b{display:block;font:800 clamp(44px,4vw + 8px,104px)/1 var(--f-display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.fact span{display:block;margin-top:16px;font-size:var(--fs-small);color:var(--on-blue);line-height:1.45}
+
+/* Catalog: neutral white */
+.cat{padding-block:var(--sec-loose)}
+.cat-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--gap-m);align-items:end;margin-bottom:var(--sec)}
+.cat-head .eyebrow{color:var(--blue);margin-bottom:24px}
+.cat-head .lead{color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap-s)}
+.tile{position:relative;display:grid;grid-template-rows:auto 1fr auto;gap:16px;min-height:clamp(280px,24vw,400px);padding:var(--pad-card);border-radius:var(--r-card);background:var(--gray);transition:background-color var(--t-micro),color var(--t-micro),transform var(--t-micro) var(--ease)}
+.tile .no{display:flex;justify-content:space-between;align-items:center;font:500 13px/1 var(--f-body);letter-spacing:.12em;color:var(--muted);transition:color var(--t-micro)}
+.tile .no svg{width:20px;height:20px;opacity:0;transform:translate(-6px,6px);transition:opacity var(--t-micro),transform var(--t-micro) var(--ease)}
+.tile .fig{align-self:end;font:800 clamp(36px,3vw + 8px,72px)/1 var(--f-display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;transition:color var(--t-micro)}
+.tile .fig small{font-size:.36em;letter-spacing:0;margin-left:4px}
+.tile .fl{display:block;margin-top:8px;font:400 13px/1.3 var(--f-body);letter-spacing:0;color:var(--muted);transition:color var(--t-micro)}
+.tile h3{font:500 clamp(18px,.6vw + 14px,24px)/1.2 var(--f-body);text-transform:none;letter-spacing:-.005em}
+.tile .sys{display:block;margin-top:6px;font-size:13px;line-height:1.45;color:var(--muted);transition:color var(--t-micro)}
+.tile:hover,.tile:focus-visible{background:var(--blue);color:var(--white);transform:translateY(-4px)}
+.tile:hover .fig,.tile:focus-visible .fig{color:var(--lime)}
+.tile:hover .no,.tile:hover .sys,.tile:hover .fl,.tile:focus-visible .no,.tile:focus-visible .sys,.tile:focus-visible .fl{color:var(--on-blue)}
+.tile:hover .no svg,.tile:focus-visible .no svg{opacity:1;transform:none}
+.tile.all{background:var(--ink);color:var(--white);align-content:space-between}
+.tile.all .no{color:rgba(255,255,255,.6)}
+.tile.all .no svg{opacity:1;transform:none;color:var(--lime)}
+.tile.all p{font:800 clamp(22px,1.6vw + 6px,40px)/1.05 var(--f-display);text-transform:uppercase;letter-spacing:-.02em;align-self:end}
+.tile.all p span{color:var(--lime)}
+.tile.all:hover{background:var(--blue)}
+
+/* Watch on ink */
+.watch{background:var(--ink);color:var(--white);padding-block:var(--sec-loose)}
+.watch-head{display:flex;justify-content:space-between;align-items:end;gap:var(--gap-m);margin-bottom:var(--sec)}
+.reel{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap-s)}
+.clip{display:grid;gap:16px}
+.clip .ph{position:relative;aspect-ratio:4/5;border-radius:var(--r-card);overflow:hidden;background:var(--ink-2)}
+.clip img{width:100%;height:100%;object-fit:cover;transition:transform 900ms var(--ease)}
+.clip:hover img{transform:scale(1.05)}
+.clip .pl{position:absolute;left:20px;bottom:20px;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--lime);color:var(--ink);transition:transform var(--t-micro) var(--ease)}
+.clip .pl svg{width:22px;height:22px;margin-left:2px}
+.clip:hover .pl{transform:scale(1.1)}
+.clip b{font-weight:500;font-size:clamp(17px,.4vw + 14px,21px)}
+.clip span.m{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+
+/* CEO */
+.ceo{padding-block:var(--sec-loose)}
+.ceo-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:var(--sec);align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:var(--r-card);background:var(--gray);display:grid;place-items:center;position:relative;overflow:hidden}
+.portrait::before{content:"";position:absolute;width:60%;aspect-ratio:1;border-radius:50%;background:var(--lime);right:-18%;top:-12%}
+.portrait span{position:relative;font-size:var(--fs-small);color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+blockquote{margin:0}
+.ceo .eyebrow{color:var(--blue)}
+.ceo q{display:block;margin-top:32px;font:400 clamp(24px,1.8vw + 10px,46px)/1.25 var(--f-body);letter-spacing:-.015em;quotes:none;text-wrap:pretty}
+.ceo q mark{background:linear-gradient(transparent 58%,var(--lime) 58%);color:inherit}
+.ceo .who{margin-top:32px;display:flex;gap:16px;align-items:baseline}
+.ceo .who b{font-weight:500}
+.ceo .who span{color:var(--muted)}
+
+/* Contact on blue */
+.contact{background:var(--blue);color:var(--white);padding-block:var(--sec-loose)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--sec);align-items:start}
+.contact h2{font-size:clamp(30px,3.4vw + 4px,76px)}
+.contact h2 span{color:var(--lime)}
+.contact .lead{margin-top:24px;color:var(--on-blue)}
+.direct{display:grid;gap:12px;margin-top:40px}
+.direct a{display:flex;align-items:center;gap:16px;padding:18px 22px;border-radius:var(--r-card);background:var(--blue-2);transition:background-color var(--t-micro),color var(--t-micro),transform var(--t-micro) var(--ease)}
+.direct a:hover{background:var(--white);color:var(--ink);transform:translateX(4px)}
+.direct svg{width:24px;height:24px;flex:none}
+.direct b{display:block;font-weight:500}
+.direct span span{display:block;font-size:var(--fs-small);opacity:.8}
+.addr{margin-top:32px;color:var(--on-blue);line-height:1.7}
+form{padding:var(--pad-card);border-radius:var(--r-card);background:var(--white);color:var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{display:grid;gap:8px;align-content:start}
+.field.full{grid-column:1/-1}
+label,.legend{font-size:var(--fs-small);font-weight:500}
+input,textarea{width:100%;height:54px;padding:0 18px;border-radius:14px;border:1.5px solid transparent;background:var(--gray);transition:border-color var(--t-micro),background-color var(--t-micro),box-shadow var(--t-micro)}
+textarea{height:128px;padding:16px 18px;resize:vertical}
+input::placeholder,textarea::placeholder{color:#85858C}
+input:hover,textarea:hover{background:var(--gray-2)}
+input:focus,textarea:focus{outline:0;background:var(--white);border-color:var(--blue);box-shadow:0 0 0 4px rgba(27,43,255,.18)}
+input:not(:placeholder-shown):not(:focus){background:var(--white);border-color:var(--gray-2)}
+.err{display:none;font-size:13px;color:#C01B1B}
+.has-error input,.has-error textarea{border-color:#C01B1B;background:#FFF5F5}
+.has-error .err{display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px;border:0;margin:0;padding:0}
+.chips legend{padding:0;margin-bottom:8px}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:inline-flex;align-items:center;height:42px;padding:0 18px;border-radius:var(--r);background:var(--gray);font-size:14px;font-weight:500;cursor:pointer;transition:background-color var(--t-micro),color var(--t-micro)}
+.chip span:hover{background:var(--gray-2)}
+.chip input:checked + span{background:var(--blue);color:var(--white)}
+.chip input:focus-visible + span{outline:2px solid var(--blue);outline-offset:3px}
+form .btn{justify-self:start}
+form .btn-primary{background:var(--ink);color:var(--white)}
+form .btn-primary:hover{background:var(--blue);box-shadow:none}
+.fine{grid-column:1/-1;font-size:13px;color:var(--muted)}
+.sent{grid-column:1/-1;padding:28px;border-radius:14px;background:var(--lime)}
+.sent b{display:block;font:800 22px/1.15 var(--f-display);text-transform:uppercase;margin-bottom:8px}
+form.is-sent > :not(.sent){display:none}
+
+/* Footer */
+.ftr{background:var(--ink);color:var(--white);padding-block:var(--sec) 32px;overflow:hidden}
+.ftr-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--gap-m)}
+.ftr h4{margin:0 0 16px;font:500 12px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ftr li a{color:rgba(255,255,255,.78);transition:color var(--t-micro)}
+.ftr li a:hover{color:var(--lime)}
+.ftr .say{font-size:var(--fs-small);color:rgba(255,255,255,.7);max-width:34ch}
+.ftr .mark{margin-top:var(--sec);font:800 clamp(96px,25vw,480px)/.8 var(--f-display);letter-spacing:-.04em;color:var(--lime);user-select:none;white-space:nowrap}
+.ftr-bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:32px;font-size:13px;color:rgba(255,255,255,.55)}
+
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#06210F;box-shadow:0 12px 30px -10px rgba(6,6,8,.6);transition:transform var(--t-micro) var(--ease),opacity 320ms var(--ease),visibility 320ms;opacity:0;visibility:hidden;transform:translateY(12px)}
+.wa.is-shown{opacity:1;visibility:visible;transform:none}
+.wa.is-shown:hover{transform:translateY(-2px) scale(1.05)}
+.wa svg{width:28px;height:28px}
+.note-lang{position:fixed;left:50%;bottom:24px;translate:-50% 0;z-index:70;padding:12px 20px;border-radius:var(--r);background:var(--lime);color:var(--ink);font-size:14px;font-weight:500}
+
+@media (max-width:1023px){
+  .nav,.hdr .btn-primary{display:none}
+  .burger{display:grid;place-items:center;width:44px;height:44px;margin-inline-start:auto;border:0;border-radius:50%;background:rgba(255,255,255,.14);cursor:pointer}
+  .burger i{display:block;width:18px;height:2px;background:currentColor;box-shadow:0 6px 0 currentColor,0 -6px 0 currentColor}
+  .hdr{color:var(--white)}
+  .menu-open{background:var(--ink)}
+  .menu-open .nav{display:flex;position:fixed;inset:68px 0 auto;flex-direction:column;gap:4px;padding:16px var(--gutter) 32px;background:var(--ink)}
+  .menu-open .nav a{height:56px;font-size:20px}
+  .hero{height:180svh}
+  .hero-copy{grid-template-columns:1fr;grid-template-rows:auto auto minmax(0,1fr)}
+  .hero-side{justify-content:flex-start}
+  .hero-meta{display:none}
+  .doors{grid-template-columns:1fr}
+  .door{min-height:0}
+  .about-grid,.cat-head,.contact-grid{grid-template-columns:1fr}
+  .tiles{grid-template-columns:repeat(2,1fr)}
+  .reel{grid-template-columns:repeat(3,minmax(240px,1fr));overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+  .clip{scroll-snap-align:start}
+  .ceo-grid{grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+  .ftr-grid > :first-child{grid-column:1/-1}
+}
+@media (max-width:767px){
+  .hdr{height:64px;gap:8px}.hdr.is-solid{height:60px}
+  .langs button{padding:0 8px}.langs button span{display:none}
+  .stage{min-height:0}
+  .hero-copy{padding-top:calc(64px + 20px);row-gap:16px}
+  .hero h1{font-size:clamp(24px, min(7.4vw, 4.6vh), 40px);line-height:1.04}
+  .hero .lead{font-size:16px}
+  .hero .lead .opt{display:none}
+  .hero .ctas{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .hero .ctas .btn{padding:0 12px}
+  .window{min-height:120px}
+  .beat{bottom:88px}
+  .door{padding:var(--sec) var(--gutter) var(--gutter)}
+  .facts{grid-template-columns:1fr}
+  .fact{display:flex;align-items:baseline;gap:20px}
+  .fact span{margin-top:0}
+  .tiles{grid-template-columns:1fr}
+  .tile{min-height:0;grid-template-rows:auto auto auto}
+  .watch-head{flex-direction:column;align-items:start}
+  .reel{grid-template-columns:repeat(3,78%);margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter);scroll-padding-inline:var(--gutter)}
+  form{grid-template-columns:1fr}
+  .ceo-grid{grid-template-columns:1fr}
+  .portrait{max-width:260px}
+  .ftr-grid{grid-template-columns:1fr}
+  .wa{right:16px;bottom:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:1ms!important;animation-iteration-count:1!important;transition-duration:1ms!important}
+  .h-in{opacity:1;transform:none}
+  .hero{height:100svh}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" data-header>
+  <a class="logo" href="#top" aria-label="CAT, home"><i aria-hidden="true"></i>CAT</a>
+  <nav class="nav" data-menu aria-label="Main">
+    <a href="#top" aria-current="page">Home</a>
+    <a href="#vp">Virtual Production</a>
+    <a href="#cranes">Cranes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="langs" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true"><svg aria-hidden="true"><use href="../../assets/icons.svg#flag-en"/></svg><span>EN</span></button>
+    <button type="button" data-lang="gr" aria-pressed="false"><svg aria-hidden="true"><use href="../../assets/icons.svg#flag-gr"/></svg><span>ΕΛ</span></button>
+  </div>
+  <a class="btn btn-primary" href="#contact">Plan your shoot</a>
+  <button class="burger" type="button" data-burger aria-expanded="false" aria-label="Menu"><i></i></button>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-label="Introduction" data-shutter>
+    <div class="stage">
+      <div class="shot">
+        <video id="heroVideo" data-src="../../assets/media/crane-sky-{q}.mp4" poster="../../assets/media/crane-sky-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+      </div>
+      <div class="hero-copy">
+        <div class="hero-top">
+          <p class="eyebrow h-in" style="color:var(--lime)">Virtual Production · Cranes &amp; Remote Systems · Athens</p>
+          <h1 class="h-in">The camera goes where <em>the story</em> needs it.</h1>
+        </div>
+        <div class="hero-side">
+          <p class="lead h-in">Virtual production and 34 high-end crane, dolly and remote-head systems for film, TV and commercials shooting in Greece. <span class="opt">Tell us the shot. We'll bring the way to get it.</span></p>
+          <div class="ctas h-in">
+            <a class="btn btn-primary" href="#contact">Plan your shoot <svg aria-hidden="true"><use href="../../assets/icons.svg#arrow"/></svg></a>
+            <a class="btn btn-ghost" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="../../assets/icons.svg#wa"/></svg>WhatsApp</a>
+          </div>
+          <p class="hero-meta h-in"><span>34 systems</span><span>7 categories</span><span>EN · ΕΛ</span></p>
+        </div>
+        <div class="window" data-window aria-hidden="true"></div>
+      </div>
+      <div class="beat">
+        <p>Tell us the shot. <span>We'll bring the way to get it.</span></p>
+        <a class="btn btn-primary" href="#contact" tabindex="-1" data-beat-cta>Plan your shoot <svg aria-hidden="true"><use href="../../assets/icons.svg#arrow"/></svg></a>
+      </div>
+      <button class="vbtn" type="button" data-video-toggle aria-controls="heroVideo" aria-pressed="false" aria-label="Pause background video"><svg class="i-pause" aria-hidden="true"><use href="../../assets/icons.svg#pause"/></svg><svg class="i-play" aria-hidden="true"><use href="../../assets/icons.svg#play"/></svg></button>
+    </div>
+  </section>
+
+  <section class="doors" aria-label="What we do">
+    <a class="door d-vp" id="vp" href="#contact">
+      <div class="top" data-reveal><span>01 · Virtual Production</span><span class="go" aria-hidden="true"><svg><use href="../../assets/icons.svg#arrow-ne"/></svg></span></div>
+      <div data-reveal style="display:grid;gap:20px"><h3>Any location, without leaving the stage.</h3><p>Backgrounds render in real time and land in camera, so the director sees the final frame on set.</p></div>
+      <div class="media" data-reveal data-d="1"><video data-src="../../assets/media/led-wall-{q}.mp4" poster="../../assets/media/led-wall-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="tags"><span class="tag">In-camera VFX</span><span class="tag">Real-time backgrounds</span><span class="tag">VR productions</span></div>
+    </a>
+    <a class="door d-cr" id="cranes" href="#catalog">
+      <div class="top" data-reveal><span>02 · Cranes &amp; Remote Systems</span><span class="go" aria-hidden="true"><svg><use href="../../assets/icons.svg#arrow-ne"/></svg></span></div>
+      <div data-reveal style="display:grid;gap:20px"><h3>From 14 metres up to the last millimetre.</h3><p>A 14-metre telescopic crane, a robotic arm that repeats a move to the millimetre, and 32 more systems between them.</p></div>
+      <div class="media" data-reveal data-d="1"><img src="../../assets/media/crane-pale-poster.jpg" alt="" loading="lazy"></div>
+      <div class="tags"><span class="tag">Telescopic cranes</span><span class="tag">Motion control</span><span class="tag">Remote heads</span></div>
+    </a>
+  </section>
+
+  <section class="about" aria-labelledby="about-t">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal style="color:var(--white)">Why CAT</p>
+      <h2 id="about-t" class="huge" data-reveal style="margin-top:32px">Crazy about technology.</h2>
+      <div class="about-grid">
+        <p class="lead measure" data-reveal><b>We keep the camera technology big productions usually fly in, ready to roll in Athens.</b> One call covers the rig, the stage and the people who know how to run them. You plan the shot, we handle what it takes to get it.</p>
+        <div class="facts">
+          <div class="fact" data-reveal><b>34</b><span>camera systems in the catalog</span></div>
+          <div class="fact" data-reveal data-d="1"><b>7</b><span>categories, from cranes to cable cams</span></div>
+          <div class="fact" data-reveal data-d="2"><b>2</b><span>languages on set: English and Greek</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat wrap" id="catalog" aria-labelledby="cat-t">
+    <div class="cat-head">
+      <div><p class="eyebrow" data-reveal>The catalog</p><h2 id="cat-t" data-reveal>Every move, one rental house.</h2></div>
+      <p class="lead measure" data-reveal data-d="1">Seven categories, 34 systems, each with a full spec sheet. Here is the headline number for each.</p>
+    </div>
+    <div class="tiles">
+      <a class="tile" href="#contact" data-reveal><span class="no">01<svg aria-hidden="true"><use href="../../assets/icons.svg#arrow-ne"/></svg></span><span class="fig">14<small>m+</small><span class="fl">telescopic length</span></span><div><h3>Telescopic cranes</h3><span class="sys">Supertechno 15 · 22 · 30 · 50+</span></div></a>
+      <a class="tile" href="#contact" data-reveal data-d="1"><span class="no">02<svg aria-hidden="true"><use href="../../assets/icons.svg#arrow-ne"/></svg></span><span class="fig">0<small>tools</small><span class="fl">to assemble a GF-9</span></span><div><h3>Modular cranes</h3><span class="sys">GF-8 · GF-9 · MB45 · Jimmy Jib</span></div></a>
+      <a class="tile" href="#contact" data-reveal data-d="2"><span class="no">03<svg aria-hidden="true"><use href="../../assets/icons.svg#arrow-ne"/></svg></span><span class="fig">3<small>m/s</small><span class="fl">sub-millimetre repeatability</span></span><div><h3>Motion control</h3><span class="sys">MRMC Bolt Jr</span></div></a>
+      <a class="tile" href="#contact" data-reveal data-d="3"><span class="no">04<svg aria-hidden="true"><use href="../../assets/icons.svg#arrow-ne"/></svg></span><span class="fig">48<small>km/h</small><span class="fl">Agito, Sports mode</span></span><div><h3>Dollies</h3><span class="sys">Agito · AutoDolly · Furio · Slidekamera</span></div></a>
+      <a class="tile" href="#contact" data-reveal><span class="no">05<svg aria-hidden="true"><use href="../../assets/icons.svg#arrow-ne"/></svg></span><span class="fig">3.65<small>m</small><span class="fl">arm, 25 kg payload</span></span><div><h3>Camera car</h3><span class="sys">Motocrane Ultra</span></div></a>
+      <a class="tile" href="#contact" data-reveal data-d="1"><span class="no">06<svg aria-hidden="true"><use href="../../assets/icons.svg#arrow-ne"/></svg></span><span class="fig">2,000<span class="fl">stored positions, 23 kg payload</span></span><div><h3>Remote heads</h3><span class="sys">Talon · Z-Head · Technoheads · Hornet</span></div></a>
+      <a class="tile" href="#contact" data-reveal data-d="2"><span class="no">07<svg aria-hidden="true"><use href="../../assets/icons.svg#arrow-ne"/></svg></span><span class="fig">35<small>km/h</small><span class="fl">point to point on a cable</span></span><div><h3>Cable &amp; aerial</h3><span class="sys">Flyline · Dynamicam · Drones</span></div></a>
+      <a class="tile all" href="#contact" data-reveal data-d="3"><span class="no">34 systems<svg aria-hidden="true"><use href="../../assets/icons.svg#arrow-ne"/></svg></span><p>See the <span>full</span> catalog</p></a>
+    </div>
+  </section>
+
+  <section class="watch" aria-labelledby="watch-t">
+    <div class="wrap">
+      <div class="watch-head">
+        <h2 id="watch-t" data-reveal>See it move.</h2>
+        <a class="link" href="https://www.youtube.com/" target="_blank" rel="noopener" data-reveal>Our YouTube channel <svg aria-hidden="true"><use href="../../assets/icons.svg#arrow-ne"/></svg></a>
+      </div>
+      <div class="reel">
+        <a class="clip" href="https://www.youtube.com/" target="_blank" rel="noopener" data-reveal><span class="ph"><img src="../../assets/media/monitor-poster.jpg" alt="" loading="lazy"><span class="pl" aria-hidden="true"><svg><use href="../../assets/icons.svg#play"/></svg></span></span><span class="m">YouTube</span><b>Showreel 2026</b></a>
+        <a class="clip" href="https://www.youtube.com/" target="_blank" rel="noopener" data-reveal data-d="1"><span class="ph"><img src="../../assets/media/led-wall-poster.jpg" alt="" loading="lazy"><span class="pl" aria-hidden="true"><svg><use href="../../assets/icons.svg#play"/></svg></span></span><span class="m">YouTube</span><b>Virtual production, behind the scenes</b></a>
+        <a class="clip" href="https://www.youtube.com/" target="_blank" rel="noopener" data-reveal data-d="2"><span class="ph"><img src="../../assets/media/cinema-camera-poster.jpg" alt="" loading="lazy"><span class="pl" aria-hidden="true"><svg><use href="../../assets/icons.svg#play"/></svg></span></span><span class="m">YouTube</span><b>Crane work, highlights</b></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ceo wrap" aria-labelledby="ceo-t">
+    <div class="ceo-grid">
+      <div class="portrait" data-reveal><span>CEO photo</span></div>
+      <blockquote data-reveal data-d="1">
+        <p class="eyebrow" id="ceo-t">A word from our CEO</p>
+        <q>We built CAT for the moment a director says “can we even do that?”. <mark>Our job is to say yes</mark>, and then make it look easy on the day.</q>
+        <footer class="who"><b>Name Surname</b><span>CEO, CAT</span></footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-t">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="eyebrow" data-reveal style="color:var(--lime)">Plan your shoot</p>
+        <h2 id="contact-t" style="margin-top:24px" data-reveal>Tell us the shot. <span>We'll tell you how.</span></h2>
+        <p class="lead measure" data-reveal>Share your dates and what you have in mind. A real person replies, usually the same day.</p>
+        <div class="direct" data-reveal>
+          <a href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="../../assets/icons.svg#wa"/></svg><span><b>WhatsApp</b><span>Fastest for quick questions</span></span></a>
+          <a href="mailto:"><svg aria-hidden="true"><use href="../../assets/icons.svg#mail"/></svg><span><b>Email</b><span>For briefs, scripts and storyboards</span></span></a>
+        </div>
+        <p class="addr" data-reveal>CAT · 5 Margarita &amp; Pefkon Street<br>Athens, Greece</p>
+      </div>
+      <form data-form novalidate data-reveal data-d="1" aria-label="Project request">
+        <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" autocomplete="name" placeholder="Your full name" required><span class="err" role="alert">Please add your name</span></div>
+        <div class="field"><label for="c-co">Company</label><input id="c-co" name="company" autocomplete="organization" placeholder="Production company"></div>
+        <div class="field"><label for="c-mail">Email</label><input id="c-mail" type="email" name="email" autocomplete="email" placeholder="name@company.com" required><span class="err" role="alert">Please add an email so we can reply</span></div>
+        <div class="field"><label for="c-dates">Shoot dates</label><input id="c-dates" name="dates" placeholder="e.g. 3 to 7 March"></div>
+        <fieldset class="field full chips"><legend class="legend">What do you need?</legend>
+          <label class="chip"><input type="radio" name="need" value="vp"><span>Virtual production</span></label>
+          <label class="chip"><input type="radio" name="need" value="cranes"><span>Cranes &amp; remote systems</span></label>
+          <label class="chip"><input type="radio" name="need" value="both" checked><span>Both</span></label>
+          <label class="chip"><input type="radio" name="need" value="unsure"><span>Not sure yet</span></label>
+        </fieldset>
+        <div class="field full"><label for="c-msg">The shot, in a few words</label><textarea id="c-msg" name="message" placeholder="Location, the move you have in mind, camera package..."></textarea></div>
+        <button class="btn btn-primary" type="submit">Send request <svg aria-hidden="true"><use href="../../assets/icons.svg#arrow"/></svg></button>
+        <p class="fine">We only use your details to reply to this request. <a href="#" style="text-decoration:underline">Privacy policy</a></p>
+        <div class="sent" data-sent hidden tabindex="-1"><b>Request received.</b>Thank you. We'll get back to you shortly, usually the same day.</div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <p class="say">Virtual production and camera cranes for film, TV and commercials shooting in Greece.</p>
+      <div><h4>Explore</h4><ul><li><a href="#top">Home</a></li><li><a href="#vp">Virtual Production</a></li><li><a href="#catalog">Cranes</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Talk to us</h4><ul><li><a href="https://wa.me/">WhatsApp</a></li><li><a href="mailto:">Email</a></li><li><a href="https://www.youtube.com/">YouTube</a></li></ul></div>
+      <div><h4>Studio</h4><ul><li>5 Margarita &amp; Pefkon St.</li><li>Athens, Greece</li></ul></div>
+    </div>
+    <div class="mark" aria-hidden="true">CAT</div>
+    <div class="ftr-bot"><span>© 2026 CAT · Crazy About Technology</span><span><a href="#">Privacy policy</a> · <a href="#">Accessibility statement</a></span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true"><use href="../../assets/icons.svg#wa"/></svg></a>
+<p class="note-lang" data-lang-note hidden>Greek version coming after translation</p>
+
+<script src="../../assets/site.js" defer></script>
+<script>
+  // Shutter: the footage window opens to full-bleed while the hero is pinned
+  addEventListener('DOMContentLoaded', () => {
+    const hero = document.querySelector('[data-shutter]');
+    if (!hero) return;
+    const stage = hero.querySelector('.stage'), win = hero.querySelector('[data-window]'), cta = hero.querySelector('[data-beat-cta]');
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    const measure = () => {
+      const s = stage.getBoundingClientRect(), w = win.getBoundingClientRect();
+      stage.style.setProperty('--ct', (w.top - s.top) + 'px');
+      stage.style.setProperty('--cr', (s.right - w.right) + 'px');
+      stage.style.setProperty('--cb', (s.bottom - w.bottom) + 'px');
+      stage.style.setProperty('--cl', (w.left - s.left) + 'px');
+    };
+    const tick = () => {
+      let e = 0;
+      if (!reduce) {
+        const r = hero.getBoundingClientRect(), span = r.height - innerHeight;
+        const p = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 0;
+        e = ease(Math.min(1, p / .8));
+      }
+      hero.style.setProperty('--e', e.toFixed(4));
+      const open = e > .6;
+      hero.classList.toggle('is-open', open);
+      cta.tabIndex = open ? 0 : -1;
+    };
+    measure(); tick();
+    document.fonts && document.fonts.ready.then(() => { measure(); tick(); });
+    addEventListener('resize', () => { measure(); tick(); });
+    addEventListener('scroll', () => requestAnimationFrame(tick), { passive: true });
+  });
+</script>
+<script src="https://crm.liavmatzri.co.il/review.js" defer></script>
+</body>
+</html>

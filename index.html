@@ -1,54 +1,214 @@
 <!doctype html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>CAT · שלוש סקיצות לעמוד הבית</title>
-<style>
-@font-face{font-family:"G Sans";src:url(assets/fonts/GoogleSans-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"G Sans";src:url(assets/fonts/GoogleSans-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
-:root{--bg:#F4F3EF;--ink:#111;--muted:#5A5852;--line:#D8D6CE;--gutter:clamp(24px,5vw,96px);--ease:cubic-bezier(.22,1,.36,1)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 clamp(16px,.35vw + 14.6px,19px)/1.6 "G Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-main{padding:clamp(48px,8vh,112px) var(--gutter) clamp(64px,10vh,128px)}
-.top{display:grid;gap:16px;max-width:60ch;margin-bottom:clamp(40px,6vh,72px)}
-.top small{font-size:13px;font-weight:500;letter-spacing:.08em;color:var(--muted)}
-h1{margin:0;font-weight:500;font-size:clamp(32px,3vw + 10px,64px);line-height:1.08;letter-spacing:-.02em}
-.top p{margin:0;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,40px)}
-a{color:inherit;text-decoration:none}
-.card{display:grid;gap:16px;align-content:start}
-.ph{position:relative;aspect-ratio:4/5;border-radius:12px;overflow:hidden}
-.ph img{width:100%;height:100%;object-fit:cover;transition:transform 900ms var(--ease)}
-.card:hover .ph img{transform:scale(1.04)}
-.ph b{position:absolute;inset-inline-start:20px;bottom:20px;font:500 clamp(26px,2vw + 8px,44px)/1 "G Sans";letter-spacing:-.02em}
-.a .ph{background:#08090B}.a .ph img{opacity:.6}.a .ph b{color:#F2F2EE}.a .ph::after{content:"";position:absolute;inset-inline-end:20px;top:20px;width:12px;height:12px;border-radius:50%;background:#19E3FF;box-shadow:0 0 16px #19E3FF}
-.b .ph{background:#F4F3EF;outline:1px solid var(--line);outline-offset:-1px}.b .ph img{position:absolute;inset:18% 12% 22%;width:76%;height:60%;border:1px solid #111}.b .ph b{color:#111}.b .ph::after{content:"";position:absolute;inset-inline-end:20px;top:20px;width:12px;height:12px;background:#FF4B14}
-.c .ph{background:#1B2BFF}.c .ph img{position:absolute;inset:40% 10% 10% 30%;width:60%;height:50%;border-radius:12px}.c .ph b{color:#C6FF1A;bottom:auto;top:20px}
-h2{margin:0;font-size:clamp(20px,.8vw + 14px,26px);font-weight:500}
-.card p{margin:0;color:var(--muted)}
-.go{display:inline-flex;align-items:center;gap:8px;font-weight:500;border-bottom:2px solid currentColor;justify-self:start;padding-bottom:2px}
-.card:hover .go{color:#C23200}
-.note{margin-top:clamp(40px,6vh,72px);padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:15px;max-width:80ch}
-@media (max-width:1023px){.grid{grid-template-columns:1fr 1fr}}
-@media (max-width:767px){.grid{grid-template-columns:1fr}.ph{aspect-ratio:16/11}}
-</style>
+<title>CAT · Virtual Production & Camera Cranes in Athens</title>
+<meta name="description" content="Virtual production and 34 high-end crane, dolly and remote-head systems for film, TV and commercials shooting in Greece.">
+<link rel="preload" href="assets/fonts/ClashDisplay-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/GoogleSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/media/cinema-camera-poster.jpg">
+<!--
+  CONCEPT · Direction A, "Through the viewfinder" (chosen by the client, 13.10.2026)
+  1. CAT sells certainty: the hardest camera move is possible here, in Greece, with the people who run it.
+  2. A producer opens a link Roee sent mid-conversation. Skeptical, checking seriousness. In 10 seconds: real kit, a real place, a person to talk to.
+  3. The page is one camera move: wide on the rig, push in to the two services, settle on the specs, land on a person.
+  4. Signature: the hero is seen through a live viewfinder (frame lines, running timecode, REC). The spec panel answers every row you point at.
+  5. Clash Display 500 + Google Sans 400. Near-black, one electric cyan used like a tally light. Colour comes from the footage.
+  6. No stock icons, no invented clients or numbers, no testimonials until real ones exist, nothing that points to Israel.
+-->
+<link rel="stylesheet" href="assets/cat.css">
 </head>
 <body>
-<main>
-  <div class="top">
-    <small>CAT · Crazy About Technology · סקיצות לעמוד הבית</small>
-    <h1>שלושה כיוונים לאותו עמוד בית</h1>
-    <p>אותו תוכן ואותו סדר בשלושתם, רק השפה העיצובית משתנה. כדאי לפתוח כל אחד גם במחשב וגם בנייד, לגלול עד הסוף ולבחור כיוון אחד שממשיכים איתו.</p>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" data-header>
+  <a class="logo" href="./" aria-label="CAT, home"><span>CAT</span><small>Crazy About Technology</small></a>
+  <nav class="nav" data-menu aria-label="Main">
+    <a href="./" aria-current="page">Home</a>
+    <a href="virtual-production.html">Virtual Production</a>
+    <a href="cranes.html">Cranes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="langs" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true"><svg aria-hidden="true"><use href="assets/icons.svg#flag-en"/></svg><span>EN</span></button>
+    <button type="button" data-lang="gr" aria-pressed="false"><svg aria-hidden="true"><use href="assets/icons.svg#flag-gr"/></svg><span>ΕΛ</span></button>
   </div>
-  <div class="grid">
-    <a class="card a" href="a-cinematic/"><span class="ph"><img src="assets/media/cinema-camera-poster.jpg" alt=""><b>א. קולנועי</b></span><h2>כהה, דרך העינית</h2><p>רקע כמעט שחור, צבע ציאן אחד כמו נורית הקלטה. הפתיחה נראית כמו מבט דרך מצלמה, עם קוד זמן רץ. מתאים אם רוצים להרגיש "הוליווד".</p><span class="go">לפתוח את סקיצה א'</span></a>
-    <a class="card b" href="b-technical/"><span class="ph"><img src="assets/media/crane-pale-poster.jpg" alt=""><b>ב. טכני</b></span><h2>בהיר, כמו דף מפרט</h2><p>נייר, דיו וכתום אחד. מספרים, יחידות ושרטוט של מנוף שמתארך בזמן הגלילה. מדבר לצלמים ולמפיקים שקוראים מפרטים.</p><span class="go">לפתוח את סקיצה ב'</span></a>
-    <a class="card c" href="c-colorfield/"><span class="ph"><img src="assets/media/crane-sky-poster.jpg" alt=""><b>ג. צבע</b></span><h2>שדות צבע נועזים</h2><p>כחול עז, שחור וירוק ליים. חלון וידאו שנפתח למסך מלא בגלילה, כמו תריס של מצלמה. הכיוון שהכי קשה לשכוח.</p><span class="go">לפתוח את סקיצה ג'</span></a>
-  </div>
-  <p class="note">סקיצה בלבד: הטפסים לא שולחים, הקישורים לוואטסאפ, למייל וליוטיוב ממתינים לפרטים האמיתיים, ותמונת המנכ"ל, השם והציטוט הם מקום שמור. הסרטונים מסטוק, עד שיגיעו צילומים של CAT.</p>
+  <a class="btn btn-primary" href="#contact">Plan your shoot</a>
+  <button class="burger" type="button" data-burger aria-expanded="false" aria-label="Menu"><i></i></button>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-label="Introduction">
+    <div class="hero-media">
+      <video id="heroVideo" data-src="assets/media/cinema-camera-{q}.mp4" poster="assets/media/cinema-camera-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+    </div>
+    <div class="vf" aria-hidden="true">
+      <i></i><i></i><i></i><i></i>
+      <div class="hud l"><span class="rec">REC</span><span>TC <span data-timecode>01:12:44:00</span></span></div>
+      <div class="hud r"><span>4K</span><span>24 FPS</span><span>ISO 800</span></div>
+      <div class="cross"></div>
+    </div>
+    <button class="vbtn" type="button" data-video-toggle aria-controls="heroVideo" aria-pressed="false" aria-label="Pause background video">
+      <svg class="i-pause" aria-hidden="true"><use href="assets/icons.svg#pause"/></svg><svg class="i-play" aria-hidden="true"><use href="assets/icons.svg#play"/></svg>
+    </button>
+    <div class="hero-copy">
+      <p class="eyebrow h-in">Virtual Production · Cranes &amp; Remote Systems · Athens</p>
+      <h1 class="h-in">The camera goes where <em>the story</em> needs it.</h1>
+      <p class="lead h-in">Virtual production and 34 high-end crane, dolly and remote-head systems for film, TV and commercials shooting in Greece. <span class="opt">Tell us the shot. We'll bring the way to get it.</span></p>
+      <div class="ctas h-in">
+        <a class="btn btn-primary" href="#contact">Plan your shoot <svg aria-hidden="true"><use href="assets/icons.svg#arrow"/></svg></a>
+        <a class="btn btn-secondary" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/icons.svg#wa"/></svg>WhatsApp</a>
+      </div>
+    </div>
+    <div class="meta" aria-hidden="true">37.98° N · 23.72° E<br>Athens, Greece</div>
+  </section>
+
+  <section class="doors wrap" aria-labelledby="doors-t">
+    <div class="doors-head">
+      <h2 id="doors-t" data-reveal>Two ways we move<br>your production.</h2>
+      <p class="lead measure" data-reveal data-d="1" style="max-width:40ch">Pick the one you came for. Most productions end up using both.</p>
+    </div>
+    <div class="doors-grid">
+      <a class="door" href="virtual-production.html" data-reveal>
+        <video data-src="assets/media/led-wall-{q}.mp4" poster="assets/media/led-wall-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+        <span class="num">01</span>
+        <span class="go" aria-hidden="true"><svg><use href="assets/icons.svg#arrow-ne"/></svg></span>
+        <h3>Virtual Production</h3>
+        <p>Shoot any location without leaving the stage. Backgrounds render in real time and land in camera, so the director sees the final frame on set.</p>
+        <span class="tags"><span class="tag">In-camera VFX</span><span class="tag">Real-time backgrounds</span><span class="tag">VR productions</span></span>
+      </a>
+      <a class="door" href="cranes.html" data-reveal data-d="1">
+        <img src="assets/media/crane-sky-poster.jpg" alt="" loading="lazy">
+        <span class="num">02</span>
+        <span class="go" aria-hidden="true"><svg><use href="assets/icons.svg#arrow-ne"/></svg></span>
+        <h3>Cranes &amp; Remote Systems</h3>
+        <p>From a 14-metre telescopic crane to a robotic arm that repeats a move to the millimetre. 34 systems, ready for your schedule.</p>
+        <span class="tags"><span class="tag">Telescopic cranes</span><span class="tag">Motion control</span><span class="tag">Remote heads</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="about" aria-labelledby="about-t">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Why CAT</p>
+      <h2 id="about-t" class="big" style="margin-top:32px" data-reveal><span class="hl">Crazy About Technology.</span> We keep the camera technology big productions usually fly in, <span class="soft">ready to roll in Athens.</span></h2>
+      <div class="about-grid">
+        <p class="lead measure" data-reveal>One call covers the rig, the stage and the people who know how to run them. You plan the shot, we handle what it takes to get it, from the first test to the last take.</p>
+        <div class="facts">
+          <div class="fact" data-reveal><b>34</b><span>camera systems in our catalog</span></div>
+          <div class="fact" data-reveal data-d="1"><b>7</b><span>categories, from cranes to cable cams</span></div>
+          <div class="fact" data-reveal data-d="2"><b>2</b><span>languages on set: English and Greek</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat wrap" id="catalog" aria-labelledby="cat-t" data-catalog>
+    <div class="cat-head">
+      <div>
+        <p class="eyebrow" data-reveal>The catalog</p>
+        <h2 id="cat-t" style="margin-top:24px" data-reveal>Every move,<br>one rental house.</h2>
+      </div>
+      <a class="link" href="cranes.html" data-reveal>See all 34 systems <svg aria-hidden="true"><use href="assets/icons.svg#arrow"/></svg></a>
+    </div>
+    <div class="cat-grid">
+      <ul class="rows">
+        <li class="row is-active" data-row data-cat="Telescopic cranes" data-model="ST50+" data-value="14" data-unit="m+" data-label="telescopic length" data-note="Pan, tilt, roll, zoom and focus moves can be stored and recalled, with precise end stops set on the crane itself." data-href="cranes/st50.html" data-pdf="assets/catalog/pdf/st50.pdf"><a class="row-a" href="cranes.html#telescopic-cranes"><span class="n">01</span><span class="t">Telescopic cranes</span><span class="m">ST10+ to ST50+ · MB45 · XJIB</span><span class="spec-m"><b>14 m+</b> telescopic length</span></a></li>
+        <li class="row" data-row data-cat="Modular cranes" data-model="GFM GF-9 Crane" data-value="0" data-unit="tools" data-label="needed to assemble it" data-note="Light parts, very high payloads at every length, and it carries either a remote head or a platform." data-href="cranes/gfm-gf9-crane.html" data-pdf="assets/catalog/pdf/gfm-gf9-crane.pdf"><a class="row-a" href="cranes.html#modular-cranes"><span class="n">02</span><span class="t">Modular cranes</span><span class="m">GF-8 · GF-9 · Jimmy Jib · Foxy · Swiss Jib</span><span class="spec-m"><b>Tool-free</b> assembly</span></a></li>
+        <li class="row" data-row data-cat="Motion control" data-model="MRMC Bolt Jr" data-value="3" data-unit="m/s" data-label="top speed, sub-millimetre repeatability" data-note="A compact robotic arm for high-speed, repeatable moves: packshots, VFX plates and anything that has to match take after take." data-href="cranes/mrmc-bolt-jr.html" data-pdf="assets/catalog/pdf/mrmc-bolt-jr.pdf"><a class="row-a" href="cranes.html#motion-control"><span class="n">03</span><span class="t">Motion control</span><span class="m">MRMC Bolt Jr · TechnoDolly 15+</span><span class="spec-m"><b>3 m/s</b>, sub-mm repeatability</span></a></li>
+        <li class="row" data-row data-cat="Dollies" data-model="Agito" data-value="48" data-unit="km/h" data-label="in Sports mode" data-note="A modular remote dolly that runs on track or across terrain, from slow precise creeps to fast tracking shots." data-href="cranes/agito.html" data-pdf="assets/catalog/pdf/agito.pdf"><a class="row-a" href="cranes.html#dollies"><span class="n">04</span><span class="t">Dollies</span><span class="m">Agito · AutoDolly · Furio · Slidekamera</span><span class="spec-m"><b>48 km/h</b> in Sports mode</span></a></li>
+        <li class="row" data-row data-cat="Camera car" data-model="Motocrane Ultra" data-value="3.65" data-unit="m" data-label="arm, 25 kg payload" data-note="Mounts to cars, trucks, boats and custom rigs, built for off-road work in heat and rain." data-href="cranes/motocrane-ultra.html" data-pdf="assets/catalog/pdf/motocrane-ultra.pdf"><a class="row-a" href="cranes.html#camera-car"><span class="n">05</span><span class="t">Camera car</span><span class="m">Motocrane Ultra</span><span class="spec-m"><b>3.65 m</b> arm, 25 kg payload</span></a></li>
+        <li class="row" data-row data-cat="Remote heads" data-model="Talon" data-value="2,000" data-unit="" data-label="stored positions, 23 kg payload" data-note="Endless pan and tilt on sliprings, joystick, bars or wheels, with lens control for primes and broadcast zooms." data-href="cranes/talon.html" data-pdf="assets/catalog/pdf/talon.pdf"><a class="row-a" href="cranes.html#remote-heads"><span class="n">06</span><span class="t">Remote heads</span><span class="m">Talon · Z-Head · Cobra · Hornet · MōVI XL</span><span class="spec-m"><b>2,000</b> stored positions</span></a></li>
+        <li class="row" data-row data-cat="Cable & aerial" data-model="Flyline" data-value="35" data-unit="km/h" data-label="point to point on a cable" data-note="Two anchor points and a rope. Carries stabilised gimbals for shots no crane can reach." data-href="cranes/flyline.html" data-pdf="assets/catalog/pdf/flyline.pdf"><a class="row-a" href="cranes.html#cable-systems-and-aerial"><span class="n">07</span><span class="t">Cable &amp; aerial</span><span class="m">Flyline · DynamiCam · Drones</span><span class="spec-m"><b>35 km/h</b> on a cable</span></a></li>
+      </ul>
+      <aside class="panel" data-panel aria-live="polite">
+        <p class="lab" data-p-cat>Telescopic cranes</p>
+        <p class="model" data-p-model>ST50+</p>
+        <p class="val"><span data-p-value>14</span><small data-p-unit>m+</small></p>
+        <p class="vl" data-p-label>telescopic length</p>
+        <p class="note" data-p-note>Pan, tilt, roll, zoom and focus moves can be stored and recalled, with precise end stops set on the crane itself.</p>
+        <div class="acts">
+          <a class="link" href="cranes/st50.html" data-p-href>View this system <svg aria-hidden="true"><use href="assets/icons.svg#arrow"/></svg></a>
+          <a class="link" href="assets/catalog/pdf/st50.pdf" target="_blank" rel="noopener" data-p-pdf><svg aria-hidden="true"><use href="assets/icons.svg#pdf"/></svg> Spec sheet (PDF)</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="watch wrap" aria-labelledby="watch-t">
+    <div class="watch-head">
+      <h2 id="watch-t" data-reveal>See it move.</h2>
+      <a class="link" href="https://www.youtube.com/" target="_blank" rel="noopener" data-reveal>Our YouTube channel <svg aria-hidden="true"><use href="assets/icons.svg#arrow-ne"/></svg></a>
+    </div>
+    <div class="reel">
+      <a class="clip" href="https://www.youtube.com/" target="_blank" rel="noopener" data-reveal><img src="assets/media/monitor-poster.jpg" alt="" loading="lazy"><span class="cap"><span><b>Showreel 2026</b><span>YOUTUBE · 2:10</span></span><span class="pl" aria-hidden="true"><svg><use href="assets/icons.svg#play"/></svg></span></span></a>
+      <a class="clip" href="https://www.youtube.com/" target="_blank" rel="noopener" data-reveal data-d="1"><img src="assets/media/led-wall-poster.jpg" alt="" loading="lazy"><span class="cap"><span><b>Virtual production, behind the scenes</b><span>YOUTUBE</span></span><span class="pl" aria-hidden="true"><svg><use href="assets/icons.svg#play"/></svg></span></span></a>
+      <a class="clip" href="https://www.youtube.com/" target="_blank" rel="noopener" data-reveal data-d="2"><img src="assets/media/crane-pale-poster.jpg" alt="" loading="lazy"><span class="cap"><span><b>Crane work, highlights</b><span>YOUTUBE</span></span><span class="pl" aria-hidden="true"><svg><use href="assets/icons.svg#play"/></svg></span></span></a>
+    </div>
+  </section>
+
+  <section class="ceo" aria-labelledby="ceo-t">
+    <div class="wrap ceo-grid">
+      <div class="portrait" data-reveal><span>CEO photo</span></div>
+      <blockquote data-reveal data-d="1">
+        <p class="eyebrow" id="ceo-t" style="margin-bottom:32px">A word from our CEO</p>
+        <q>We built CAT for the moment a director says “can we even do that?”. Our job is to say yes, and then make it look easy on the day.</q>
+        <footer class="who"><b>Name Surname</b><span>CEO, CAT</span></footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="contact wrap" id="contact" aria-labelledby="contact-t">
+    <div class="contact-grid">
+      <div>
+        <p class="eyebrow" data-reveal>Plan your shoot</p>
+        <h2 id="contact-t" style="margin-top:24px" data-reveal>Tell us the shot. We'll tell you how.</h2>
+        <p class="lead measure" data-reveal>Share your dates and what you have in mind. A real person replies, usually the same day.</p>
+        <div class="direct" data-reveal>
+          <a href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/icons.svg#wa"/></svg><span><b>WhatsApp</b><span>Fastest for quick questions</span></span></a>
+          <a href="mailto:"><svg aria-hidden="true"><use href="assets/icons.svg#mail"/></svg><span><b>Email</b><span>For briefs, scripts and storyboards</span></span></a>
+        </div>
+        <p class="addr" data-reveal>CAT · 5 Margarita &amp; Pefkon Street<br>Athens, Greece</p>
+      </div>
+      <form data-form novalidate data-reveal data-d="1" aria-label="Project request">
+        <div class="field"><label for="a-name">Name</label><input id="a-name" name="name" autocomplete="name" placeholder="Your full name" required><span class="err" role="alert">Please add your name</span></div>
+        <div class="field"><label for="a-co">Company</label><input id="a-co" name="company" autocomplete="organization" placeholder="Production company"></div>
+        <div class="field"><label for="a-mail">Email</label><input id="a-mail" type="email" name="email" autocomplete="email" placeholder="name@company.com" required><span class="err" role="alert">Please add an email so we can reply</span></div>
+        <div class="field"><label for="a-dates">Shoot dates</label><input id="a-dates" name="dates" placeholder="e.g. 3 to 7 March"></div>
+        <fieldset class="field full chips"><legend class="legend">What do you need?</legend>
+          <label class="chip"><input type="radio" name="need" value="vp"><span>Virtual production</span></label>
+          <label class="chip"><input type="radio" name="need" value="cranes"><span>Cranes &amp; remote systems</span></label>
+          <label class="chip"><input type="radio" name="need" value="both" checked><span>Both</span></label>
+          <label class="chip"><input type="radio" name="need" value="unsure"><span>Not sure yet</span></label>
+        </fieldset>
+        <div class="field full"><label for="a-msg">The shot, in a few words</label><textarea id="a-msg" name="message" placeholder="Location, the move you have in mind, camera package..."></textarea></div>
+        <button class="btn btn-primary" type="submit">Send request <svg aria-hidden="true"><use href="assets/icons.svg#arrow"/></svg></button>
+        <p class="fine">We only use your details to reply to this request. <a href="#" style="text-decoration:underline">Privacy policy</a></p>
+        <div class="sent" data-sent hidden tabindex="-1"><b>Request received.</b>Thank you. We'll get back to you shortly, usually the same day.</div>
+      </form>
+    </div>
+  </section>
 </main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <p class="say">The camera goes where the story needs it.</p>
+      <div><h4>Explore</h4><ul><li><a href="./">Home</a></li><li><a href="virtual-production.html">Virtual Production</a></li><li><a href="cranes.html">Cranes</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Talk to us</h4><ul><li><a href="https://wa.me/">WhatsApp</a></li><li><a href="mailto:">Email</a></li><li><a href="https://www.youtube.com/">YouTube</a></li></ul></div>
+      <div><h4>Studio</h4><ul><li>5 Margarita &amp; Pefkon St.</li><li>Athens, Greece</li></ul></div>
+    </div>
+    <div class="mark" aria-hidden="true">CAT</div>
+    <div class="ftr-bot"><span>© 2026 CAT · Crazy About Technology</span><span><a href="#">Privacy policy</a> · <a href="#">Accessibility statement</a></span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true"><use href="assets/icons.svg#wa"/></svg></a>
+<p class="note-lang" data-lang-note hidden>Greek version coming after translation</p>
+
+<script src="assets/site.js" defer></script>
 <script src="https://crm.liavmatzri.co.il/review.js" defer></script>
 </body>
 </html>

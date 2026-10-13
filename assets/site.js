@@ -13,6 +13,7 @@
       header.classList.toggle('is-solid', y > 24);
       const goingDown = y > lastY && y > 320;
       header.classList.toggle('is-hidden', goingDown && !header.classList.contains('menu-open'));
+      document.body.classList.toggle('hdr-gone', header.classList.contains('is-hidden'));
     }
     lastY = y;
   };
@@ -108,10 +109,56 @@
       ['cat', 'model', 'value', 'unit', 'label', 'note'].forEach(k => {
         const t = panel.querySelector(`[data-p-${k}]`); if (t && row.dataset[k] !== undefined) t.textContent = row.dataset[k];
       });
+      const ph = panel.querySelector('[data-p-href]'); if (ph && row.dataset.href) ph.href = row.dataset.href;
+      const pp = panel.querySelector('[data-p-pdf]'); if (pp && row.dataset.pdf) pp.href = row.dataset.pdf;
       panel.classList.remove('flash'); void panel.offsetWidth; panel.classList.add('flash');
     };
-    cat.querySelectorAll('[data-row]').forEach(r => { r.addEventListener('mouseenter', () => set(r)); r.addEventListener('focus', () => set(r)); });
+    cat.querySelectorAll('[data-row]').forEach(r => { r.addEventListener('mouseenter', () => set(r)); r.addEventListener('focusin', () => set(r)); });
   });
+
+  /* Catalog page: category chips filter the groups; #category in the URL opens that category */
+  const filter = document.querySelector('[data-filter]');
+  if (filter) {
+    const chips = [...filter.querySelectorAll('[data-f]')];
+    const groups = [...document.querySelectorAll('[data-group]')];
+    const apply = (f, scroll) => {
+      chips.forEach(c => c.setAttribute('aria-pressed', String(c.dataset.f === f)));
+      groups.forEach(g => { g.hidden = f !== 'all' && g.dataset.group !== f; });
+      groups.forEach(g => g.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in')));
+      const on = chips.find(c => c.dataset.f === f);
+      if (on) on.scrollIntoView({ block: 'nearest', inline: 'center', behavior: reduce ? 'auto' : 'smooth' });
+      if (scroll) {
+        const top = filter.getBoundingClientRect().top + scrollY - (header ? header.offsetHeight : 0);
+        if (scrollY > top + 4 || scroll === 'force') scrollTo({ top, behavior: reduce ? 'auto' : 'smooth' });
+      }
+    };
+    chips.forEach(c => c.addEventListener('click', () => {
+      apply(c.dataset.f, true);
+      history.replaceState(null, '', c.dataset.f === 'all' ? location.pathname : '#' + c.dataset.f);
+    }));
+    const fromHash = () => { const h = location.hash.slice(1); if (chips.some(c => c.dataset.f === h)) apply(h, 'force'); };
+    addEventListener('hashchange', fromHash);
+    if (location.hash) requestAnimationFrame(fromHash);
+  }
+
+  /* Product gallery: thumbnails swap the main image */
+  document.querySelectorAll('[data-gallery]').forEach(g => {
+    const stage = g.querySelector('[data-stage]'), main = g.querySelector('[data-stage-img]'), n = g.querySelector('[data-stage-n]');
+    const thumbs = [...g.querySelectorAll('[data-thumb]')];
+    thumbs.forEach((t, i) => t.addEventListener('click', () => {
+      main.src = t.dataset.src;
+      stage.classList.toggle('plate', t.dataset.plate === '1');
+      main.classList.remove('swap'); void main.offsetWidth; main.classList.add('swap');
+      thumbs.forEach(x => x.setAttribute('aria-current', String(x === t)));
+      if (n) n.textContent = i + 1;
+    }));
+  });
+
+  /* Long product descriptions open in place */
+  document.querySelectorAll('[data-more]').forEach(b => b.addEventListener('click', () => {
+    const t = document.getElementById(b.getAttribute('aria-controls'));
+    t.classList.add('open'); b.setAttribute('aria-expanded', 'true'); b.hidden = true;
+  }));
 
   /* Language switch (sketch: shows the state, the Greek copy arrives after translation) */
   document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => {
